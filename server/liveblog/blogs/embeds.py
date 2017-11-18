@@ -228,8 +228,8 @@ def embed(blog_id, theme=None, output=None, api_host=None):
         )
 
     async = theme.get('asyncTheme', False)
-    api_host = api_host.replace('//', 'https://') if api_host.startswith('//') else api_host
-    api_host = api_host.replace('http://', 'https://')
+    api_host = api_host.replace('//', 'http://') if api_host.startswith('//') else api_host
+    api_host = api_host.replace('http://', 'http://')
 
     scope = {
         'blog': blog,
